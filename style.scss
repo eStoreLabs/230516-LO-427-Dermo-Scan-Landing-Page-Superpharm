@@ -91,6 +91,7 @@ html {
   }
 
   .es-steps {
+    padding-bottom: 45px;
     background-color: #edeff1;
 
     &__title {
@@ -103,7 +104,8 @@ html {
       position: relative;
       margin-bottom: 30px;
 
-      .slick-pagination {
+      .slick-pagination,
+      .slick-pagination-2 {
         position: absolute;
         bottom: -10px;
         left: 50%;
@@ -166,6 +168,267 @@ html {
         // font-size: 18px;
         text-align: center;
         margin-bottom: 20px;
+      }
+    }
+  }
+
+  .es-advanced {
+    background-color: rgb(137, 176, 210, 0.329);
+    padding: 35px 15px;
+
+    &__title {
+      &--light {
+        font-weight: 300;
+      }
+    }
+
+    &__description {
+      @include text;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    &__text {
+      margin-bottom: 50px;
+    }
+
+    &__item {
+      position: relative;
+      max-width: 370px;
+      margin-bottom: 80px;
+      padding: 75px 25px;
+      padding-bottom: 15px;
+      border: 1px solid black;
+      border-radius: 15px;
+
+      &--first {
+        &::before {
+          content: '';
+          width: 100%;
+          height: 87px;
+          background: url('./images/icon-1-bg.png') no-repeat center center;
+          position: absolute;
+          top: 3px;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+
+      &--second {
+        &::before {
+          content: '';
+          width: 100%;
+          height: 87px;
+          background: url('./images/icon-2-bg.png') no-repeat center center;
+          position: absolute;
+          top: 0;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+
+      &:last-of-type {
+        margin-bottom: 30px;
+      }
+    }
+
+    &__problem-title {
+      max-width: 190px;
+      @include text;
+      font-size: 30px;
+      margin: 0 auto;
+      margin-bottom: 20px;
+      text-align: center;
+      color: $red;
+
+      &--bold {
+        font-weight: 700;
+      }
+    }
+
+    &__problem-description {
+      min-height: 110px;
+      @include text;
+      text-align: center;
+    }
+
+    &__disclaimer {
+      @include text;
+      margin-bottom: 30px;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    &__section-description {
+      padding-left: 30px;
+      padding-right: 30px;
+      text-align: center;
+    }
+  }
+
+  .es-science {
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    &__title {
+      &--light {
+        font-weight: 300;
+      }
+    }
+
+    &__slider-2 {
+      position: relative;
+      margin-bottom: 30px;
+
+      .slick-pagination-2 {
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        text-align: center;
+      }
+
+      .slick-dots {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        gap: 0 4px;
+        padding: 0;
+        margin: 0;
+      }
+
+      .slick-dots li {
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        border-radius: 50%;
+        background: #d6d7db;
+        opacity: 1;
+      }
+
+      .slick-dots li:not(:last-child) {
+        margin-right: 6px;
+      }
+
+      .slick-dots li.slick-active {
+        background: $blue;
+      }
+
+      .slick-dots li button {
+        display: none;
+      }
+    }
+
+    &__slide {
+      padding-right: 15px;
+    }
+
+    &__slide-container {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    &__slide-img {
+      @include img;
+      margin-bottom: 20px;
+    }
+
+    &__slide-name {
+      @include text;
+      margin-bottom: 20px;
+      font-weight: 700;
+      color: $red;
+      text-transform: uppercase;
+    }
+
+    &__slide-description {
+      @include text;
+      margin-bottom: 20px;
+    }
+  }
+
+  .es-faq {
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    &__title {
+      &--light {
+        font-weight: 300;
+      }
+    }
+
+    .es-accordion {
+      max-width: 1200px;
+      padding-left: 15px;
+      padding-right: 15px;
+
+      &__element {
+        margin-bottom: 6px;
+        background: #d5e3f0;
+        border: 2px solid #d5e3f0;
+        border-radius: 5px;
+        box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+      }
+
+      &__element-content {
+        font-size: 13px;
+        color: #888885;
+        overflow: hidden;
+        padding-left: 20px;
+        padding-right: 20px;
+        max-height: 0;
+        transition: max-height 0.5s ease-out;
+        background: $white;
+      }
+
+      &__title {
+        @include text;
+        font-weight: 700;
+        position: relative;
+        padding: 17px 70px 17px 15px;
+        font-size: 16px;
+        color: $blue;
+        -webkit-transition: all 200ms ease-out;
+        -moz-transition: all 200ms ease-out;
+        -o-transition: all 200ms ease-out;
+        transition: all 200ms ease-out;
+        cursor: pointer;
+      }
+
+      .acc-tab:before {
+        font-family: 'FontAwesome';
+        content: '';
+        display: block;
+        position: absolute;
+        width: 50px;
+        height: 100%;
+        top: 0;
+        right: 0;
+        background: url(../images/plus.png) 50% 50% no-repeat;
+        color: #fff;
+        text-align: center;
+        line-height: 50px;
+        -webkit-transition: all 200ms ease-out;
+        -moz-transition: all 200ms ease-out;
+        -o-transition: all 200ms ease-out;
+        transition: all 200ms ease-out;
+      }
+
+      .acc-tab.active:before {
+        background: url(../images/minus.png) 50% 50% no-repeat;
+      }
+
+      &__title:hover:before {
+        // background-color: #333;
+      }
+
+      &__title:hover {
+        // color: #333333;
+      }
+
+      & > div:last-of-type {
+        margin-bottom: 0;
       }
     }
   }
