@@ -1,0 +1,45 @@
+@import 'animations';
+
+$regular: 'Nunito';
+
+$primary: #3d465a;
+$red: #ed1a38;
+$blue: #17479e;
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+}
+#es-dermoscan.es-dermoscan {
+  font-weight: 300;
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0;
+  color: #000;
+  background-color: #fff;
+  font-family: $regular;
+  font-size: 18px;
+
+  .es-kv {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  #es-dermoscan.es-dermoscan {
+  }
+}
