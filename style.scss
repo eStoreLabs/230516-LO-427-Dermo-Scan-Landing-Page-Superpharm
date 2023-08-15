@@ -1,10 +1,12 @@
 @import 'animations';
+@import 'slider';
 
 $regular: 'Nunito';
 
 $primary: #3d465a;
 $red: #ed1a38;
 $blue: #17479e;
+$white: #ffffff;
 
 html,
 body {
@@ -19,9 +21,22 @@ html {
 * {
   box-sizing: border-box;
 }
-img {
-  max-width: 100%;
+
+@mixin text {
+  margin: 0;
+  padding: 0;
+  line-height: inherit;
+  color: inherit;
+  font-family: inherit;
+  font-weight: inherit;
 }
+
+@mixin img {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
 #es-dermoscan.es-dermoscan {
   font-weight: 300;
   line-height: 1.2;
@@ -33,9 +48,126 @@ img {
   font-family: $regular;
   font-size: 18px;
 
+  .es-button {
+    @include text;
+    display: block;
+    max-width: 295px;
+    margin: 0 auto;
+    padding: 15px 15px;
+    color: $white;
+    font-weight: 800;
+    background-color: $blue;
+    border: none;
+    border-radius: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      background-color: #1f60d8;
+    }
+  }
+
+  .es-title {
+    @include text;
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $blue;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    text-align: center;
+  }
+
   .es-kv {
-    padding-left: 15px;
-    padding-right: 15px;
+    background-color: #edeff1;
+    padding-bottom: 45px;
+
+    &__img {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+
+  .es-steps {
+    background-color: #edeff1;
+
+    &__title {
+      &--light {
+        font-weight: 300;
+      }
+    }
+
+    &__slider {
+      position: relative;
+      margin-bottom: 30px;
+
+      .slick-pagination {
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        text-align: center;
+      }
+
+      .slick-dots {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        gap: 0 4px;
+        padding: 0;
+        margin: 0;
+      }
+
+      .slick-dots li {
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        border-radius: 50%;
+        background: #d6d7db;
+        opacity: 1;
+      }
+
+      .slick-dots li:not(:last-child) {
+        margin-right: 6px;
+      }
+
+      .slick-dots li.slick-active {
+        background: $blue;
+      }
+
+      .slick-dots li button {
+        display: none;
+      }
+    }
+
+    &__slide {
+      &-img {
+        @include img;
+      }
+
+      &-name {
+        @include text;
+        margin-top: 30px;
+        margin-bottom: 20px;
+        font-weight: 700;
+        color: $blue;
+        font-size: 24px;
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      &-description {
+        @include text;
+        max-width: 260px;
+        margin: 0 auto;
+        // font-size: 18px;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+    }
   }
 }
 
