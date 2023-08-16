@@ -133,6 +133,41 @@ html {
     }
   }
 
+  .es-qr {
+    display: none;
+    position: relative;
+    margin-top: -20px;
+    padding-top: 20px;
+    z-index: 2;
+    background-color: #d5e3f0;
+
+    &__text {
+      @include text;
+    }
+
+    &__text-title {
+      @include text;
+      margin-bottom: 10px;
+      font-size: 30px;
+      font-weight: 800;
+      color: $blue;
+      animation: es-pulse 2s infinite;
+    }
+
+    &__text-subtitle {
+      @include text;
+      display: inline-block;
+      margin-bottom: 10px;
+      font-size: 20px;
+      color: $blue;
+    }
+
+    &__description {
+      @include text;
+      color: $primary;
+    }
+  }
+
   .es-steps {
     padding-bottom: 45px;
     background-color: #edeff1;
@@ -186,6 +221,10 @@ html {
       .slick-dots li button {
         display: none;
       }
+
+      &--desktop {
+        display: none;
+      }
     }
 
     &__slide {
@@ -229,6 +268,12 @@ html {
       @include text;
       margin: 0 auto;
       text-align: center;
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     &__text {
@@ -303,6 +348,7 @@ html {
     }
 
     &__section-description {
+      @include text;
       padding-left: 30px;
       padding-right: 30px;
       text-align: center;
@@ -368,13 +414,17 @@ html {
     }
 
     &__slide-container {
-      padding-left: 15px;
+      padding-left: 40px;
       padding-right: 15px;
     }
 
     &__slide-img {
       @include img;
       margin-bottom: 20px;
+
+      &--desktop {
+        display: none;
+      }
     }
 
     &__slide-name {
@@ -388,6 +438,12 @@ html {
     &__slide-description {
       @include text;
       margin-bottom: 20px;
+    }
+
+    &__text {
+      &--desktop {
+        display: none;
+      }
     }
   }
 
@@ -477,6 +533,17 @@ html {
   }
 }
 
+@media (min-width: 480px) {
+  #es-dermoscan.es-dermoscan {
+    .es-science {
+      &__slide-img {
+        margin-left: 0;
+        width: 450px;
+      }
+    }
+  }
+}
+
 @media (min-width: 550px) {
   #es-dermoscan.es-dermoscan {
     .es-kv {
@@ -517,6 +584,28 @@ html {
         }
       }
     }
+
+    .es-steps {
+      padding-top: 15px;
+
+      &__slider {
+        display: none;
+
+        &--desktop {
+          display: block;
+        }
+      }
+
+      &__slides {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+        align-items: flex-start;
+        max-width: 570px;
+        margin: 0 auto;
+      }
+    }
   }
 }
 
@@ -533,6 +622,60 @@ html {
         order: 1;
       }
     }
+
+    .es-qr {
+      display: block;
+      padding: 15px;
+      padding-bottom: 0;
+
+      &__content {
+        display: flex;
+        gap: 90px;
+        justify-content: center;
+        align-items: center;
+      }
+
+      &__img {
+        @include img;
+        width: 340px;
+      }
+    }
+
+    .es-advanced {
+      &__content-inner {
+        display: flex;
+        gap: 10px;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+      }
+
+      &__description {
+        margin-bottom: 80px;
+      }
+
+      &__item {
+        width: 50%;
+        min-height: 310px;
+        margin-bottom: 30px;
+      }
+    }
+
+    .es-science {
+      &__slide-img {
+        display: none;
+        width: 50%;
+
+        &--desktop {
+          display: block;
+        }
+      }
+      &__slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
   }
 }
 
@@ -543,12 +686,30 @@ html {
         bottom: 6%;
       }
     }
+
+    .es-qr {
+      margin-top: -44px;
+    }
+
+    .es-steps {
+      padding-top: 60px;
+    }
   }
 }
 
 @media (min-width: 900px) {
   #es-dermoscan.es-dermoscan {
+    .es-title {
+      font-size: 35px;
+    }
+
     .es-kv {
+      &__img {
+        &--desktop {
+          width: 500px;
+        }
+      }
+
       &__start-text {
         bottom: 7%;
       }
@@ -562,6 +723,56 @@ html {
         font-size: 18px;
       }
     }
+
+    .es-advanced {
+      &__disclaimer {
+        max-width: 740px;
+        margin-bottom: 10px;
+      }
+
+      &__section-description {
+        max-width: 840px;
+        margin-top: 0;
+      }
+    }
+
+    .es-steps {
+      padding-bottom: 20px;
+
+      &__title {
+        margin-bottom: 60px;
+      }
+    }
+
+    .es-qr {
+      background: url('./images/qr-background.png') no-repeat 65% center;
+    }
+  }
+}
+
+@media (min-width: 1050px) {
+  #es-dermoscan.es-dermoscan {
+    .es-steps {
+      &__slides {
+        max-width: 100%;
+      }
+    }
+
+    .es-science {
+      position: relative;
+
+      &__text {
+        display: none;
+
+        &--desktop {
+          display: block;
+          position: absolute;
+          left: 50%;
+          padding-left: 30px;
+          text-align-last: left;
+        }
+      }
+    }
   }
 }
 
@@ -570,12 +781,31 @@ html {
     .es-kv {
       gap: 30px;
 
+      &__content {
+        margin-bottom: 80px;
+      }
+
       &__title {
+        margin-bottom: 10px;
         font-size: 35px;
       }
 
       &__subtitle {
         font-size: 19px;
+      }
+    }
+
+    .es-advanced {
+      &__content-inner {
+        gap: 30px;
+      }
+    }
+
+    .es-science {
+      &__text {
+        &--desktop {
+          top: 45px;
+        }
       }
     }
   }
