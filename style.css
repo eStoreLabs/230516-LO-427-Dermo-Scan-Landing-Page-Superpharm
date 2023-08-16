@@ -852,4 +852,11 @@ html {
     bottom: 30%;
     left: 55%;
   }
+  #es-dermoscan.es-dermoscan .es-faq .es-accordion__title {
+    padding: 17px 273px 17px 15px;
+    font-size: 21px;
+  }
+  #es-dermoscan.es-dermoscan .es-faq .es-accordion .acc-tab:before {
+    right: 12px;
+  }
 }/*# sourceMappingURL=style.css.map */

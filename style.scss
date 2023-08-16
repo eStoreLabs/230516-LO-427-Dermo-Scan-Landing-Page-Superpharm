@@ -841,5 +841,18 @@ html {
         left: 55%;
       }
     }
+
+    .es-faq {
+      .es-accordion {
+        &__title {
+          padding: 17px 273px 17px 15px;
+          font-size: 21px;
+        }
+
+        .acc-tab:before {
+          right: 12px;
+        }
+      }
+    }
   }
 }
