@@ -1,25 +1,65 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;700;800&display=swap');
-@keyframes es-pulse {
+@-webkit-keyframes es-pulse {
   0% {
+    -webkit-transform: scale(1);
     transform: scale(1);
   }
   70% {
+    -webkit-transform: scale(1.05);
     transform: scale(1.05);
   }
   to {
+    -webkit-transform: scale(1);
     transform: scale(1);
+  }
+}
+@keyframes es-pulse {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  70% {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+  to {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes es-pulse2 {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  70% {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+    -webkit-box-shadow: 0 0 0 15px rgba(208, 230, 185, 0);
+    box-shadow: 0 0 0 15px rgba(208, 230, 185, 0);
+  }
+  to {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-box-shadow: 0 0 0 rgba(208, 230, 185, 0);
+    box-shadow: 0 0 0 rgba(208, 230, 185, 0);
   }
 }
 @keyframes es-pulse2 {
   0% {
+    -webkit-transform: scale(1);
     transform: scale(1);
   }
   70% {
+    -webkit-transform: scale(1.05);
     transform: scale(1.05);
+    -webkit-box-shadow: 0 0 0 15px rgba(208, 230, 185, 0);
     box-shadow: 0 0 0 15px rgba(208, 230, 185, 0);
   }
   to {
+    -webkit-transform: scale(1);
     transform: scale(1);
+    -webkit-box-shadow: 0 0 0 rgba(208, 230, 185, 0);
     box-shadow: 0 0 0 rgba(208, 230, 185, 0);
   }
 }
@@ -27,12 +67,15 @@
 .slick-slider {
   position: relative;
   display: block;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-user-select: none;
   -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
   -webkit-touch-callout: none;
   -khtml-user-select: none;
+  -ms-touch-action: pan-y;
   touch-action: pan-y;
   -webkit-tap-highlight-color: transparent;
 }
@@ -56,6 +99,7 @@
 
 .slick-slider .slick-track,
 .slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
 
@@ -134,6 +178,7 @@ html {
 }
 
 * {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -167,6 +212,8 @@ html {
   text-decoration: none;
   text-transform: uppercase;
   cursor: pointer;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 #es-dermoscan.es-dermoscan .es-button:hover {
@@ -265,6 +312,7 @@ html {
   font-size: 30px;
   font-weight: 800;
   color: #17479e;
+  -webkit-animation: es-pulse 2s infinite;
   animation: es-pulse 2s infinite;
 }
 #es-dermoscan.es-dermoscan .es-qr__text-subtitle {
@@ -304,10 +352,14 @@ html {
   position: absolute;
   bottom: -10px;
   left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
   transform: translateX(-50%);
   text-align: center;
 }
 #es-dermoscan.es-dermoscan .es-steps__slider .slick-dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 0 4px;
   padding: 0;
@@ -385,8 +437,15 @@ html {
   padding-right: 10px;
 }
 #es-dermoscan.es-dermoscan .es-advanced__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 #es-dermoscan.es-dermoscan .es-advanced__text {
@@ -409,6 +468,8 @@ html {
   position: absolute;
   top: 3px;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 #es-dermoscan.es-dermoscan .es-advanced__item--second::before {
@@ -419,6 +480,8 @@ html {
   position: absolute;
   top: 0;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 #es-dermoscan.es-dermoscan .es-advanced__item:last-of-type {
@@ -491,10 +554,14 @@ html {
   position: absolute;
   bottom: -10px;
   left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
   transform: translateX(-50%);
   text-align: center;
 }
 #es-dermoscan.es-dermoscan .es-science__slider-2 .slick-dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 0 4px;
   padding: 0;
@@ -579,6 +646,7 @@ html {
   background: #d5e3f0;
   border: 2px solid #d5e3f0;
   border-radius: 5px;
+  -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
 }
 #es-dermoscan.es-dermoscan .es-faq .es-accordion__element-content {
@@ -588,6 +656,8 @@ html {
   padding-left: 20px;
   padding-right: 20px;
   max-height: 0;
+  -webkit-transition: max-height 0.5s ease-out;
+  -o-transition: max-height 0.5s ease-out;
   transition: max-height 0.5s ease-out;
   background: #ffffff;
 }
@@ -603,6 +673,8 @@ html {
   padding: 17px 50px 17px 15px;
   font-size: 16px;
   color: #17479e;
+  -webkit-transition: all 200ms ease-out;
+  -o-transition: all 200ms ease-out;
   transition: all 200ms ease-out;
   cursor: pointer;
 }
@@ -619,6 +691,8 @@ html {
   color: #fff;
   text-align: center;
   line-height: 50px;
+  -webkit-transition: all 200ms ease-out;
+  -o-transition: all 200ms ease-out;
   transition: all 200ms ease-out;
 }
 #es-dermoscan.es-dermoscan .es-faq .es-accordion .acc-tab.active:before {
@@ -679,10 +753,17 @@ html {
     display: block;
   }
   #es-dermoscan.es-dermoscan .es-steps__slides {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     gap: 10px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
     align-items: flex-start;
     max-width: 570px;
     margin: 0 auto;
@@ -690,13 +771,21 @@ html {
 }
 @media (min-width: 695px) {
   #es-dermoscan.es-dermoscan .es-kv {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     padding-top: 50px;
     padding-bottom: 60px;
   }
   #es-dermoscan.es-dermoscan .es-kv__content {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
     order: 1;
   }
   #es-dermoscan.es-dermoscan .es-qr {
@@ -705,9 +794,15 @@ html {
     padding-bottom: 0;
   }
   #es-dermoscan.es-dermoscan .es-qr__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     gap: 40px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
   }
   #es-dermoscan.es-dermoscan .es-qr__img {
@@ -717,10 +812,19 @@ html {
     width: 340px;
   }
   #es-dermoscan.es-dermoscan .es-advanced__content-inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     gap: 10px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
     align-items: flex-start;
   }
   #es-dermoscan.es-dermoscan .es-advanced__description {
@@ -743,11 +847,19 @@ html {
     display: block;
   }
   #es-dermoscan.es-dermoscan .es-science__slide {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
   }
   #es-dermoscan.es-dermoscan .es-science__slide-container {
+    -webkit-box-flex: 50%;
+    -ms-flex: 50%;
     flex: 50%;
   }
   #es-dermoscan.es-dermoscan .es-science__slide-description {
@@ -804,6 +916,8 @@ html {
     background: url('../images/qr-background.png') no-repeat 65% center;
   }
   #es-dermoscan.es-dermoscan .es-qr__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     gap: 90px;
   }
@@ -854,5 +968,12 @@ html {
   #es-dermoscan.es-dermoscan .es-science .slick-pagination-2 {
     bottom: 30%;
     left: 55%;
+  }
+  #es-dermoscan.es-dermoscan .es-faq .es-accordion__title {
+    padding: 17px 273px 17px 15px;
+    font-size: 21px;
+  }
+  #es-dermoscan.es-dermoscan .es-faq .es-accordion .acc-tab:before {
+    right: 12px;
   }
 } /*# sourceMappingURL=style.css.map */
