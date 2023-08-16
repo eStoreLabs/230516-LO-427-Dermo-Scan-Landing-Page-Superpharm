@@ -43,7 +43,7 @@ html {
   max-width: 1280px;
   margin: 0 auto;
   padding: 0;
-  color: #000;
+  color: $primary;
   background-color: #fff;
   font-family: $regular;
   font-size: 18px;
@@ -87,6 +87,49 @@ html {
     &__img {
       width: 100%;
       margin-bottom: 20px;
+
+      &--desktop {
+        display: none;
+      }
+    }
+
+    &__start-text {
+      display: none;
+    }
+
+    &__content {
+      display: none;
+      padding: 30px;
+    }
+
+    &__logo {
+      margin-bottom: 20px;
+    }
+
+    &__description {
+      position: relative;
+      padding-left: 20px;
+
+      &::before {
+        position: absolute;
+        content: '';
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-left: 3px solid #3f4659;
+      }
+    }
+
+    &__title {
+      font-size: 20px;
+      text-align-last: left;
+      font-weight: 800;
+    }
+
+    &__subtitle {
+      font-size: 16px;
+      max-width: 366px;
+      @include text;
     }
   }
 
@@ -434,7 +477,106 @@ html {
   }
 }
 
-@media (max-width: 600px) {
+@media (min-width: 550px) {
   #es-dermoscan.es-dermoscan {
+    .es-kv {
+      position: relative;
+
+      &__button {
+        display: none;
+      }
+
+      &__hero-images {
+      }
+
+      &__content {
+        display: block;
+        // padding-top: 100px;
+      }
+
+      &__start-text {
+        display: inline-block;
+        position: absolute;
+        bottom: 1%;
+        display: block;
+        width: 100%;
+        @include text;
+        padding: 28px;
+        font-weight: 700;
+        color: $white;
+        background: $blue;
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      &__img {
+        display: none;
+
+        &--desktop {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 695px) {
+  #es-dermoscan.es-dermoscan {
+    .es-kv {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 50px;
+      padding-bottom: 60px;
+
+      &__content {
+        order: 1;
+      }
+    }
+  }
+}
+
+@media (min-width: 820px) {
+  #es-dermoscan.es-dermoscan {
+    .es-kv {
+      &__start-text {
+        bottom: 6%;
+      }
+    }
+  }
+}
+
+@media (min-width: 900px) {
+  #es-dermoscan.es-dermoscan {
+    .es-kv {
+      &__start-text {
+        bottom: 7%;
+      }
+
+      &__title {
+        font-size: 28px;
+        font-weight: 800;
+      }
+
+      &__subtitle {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  #es-dermoscan.es-dermoscan {
+    .es-kv {
+      gap: 30px;
+
+      &__title {
+        font-size: 35px;
+      }
+
+      &__subtitle {
+        font-size: 19px;
+      }
+    }
   }
 }
