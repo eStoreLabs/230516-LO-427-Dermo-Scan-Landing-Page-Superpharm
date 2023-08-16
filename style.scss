@@ -1,5 +1,6 @@
-@import 'animations';
-@import 'slider';
+@import 'scss/animations';
+@import 'scss/fonts';
+@import 'scss/slider';
 
 $regular: 'Nunito';
 
@@ -77,6 +78,8 @@ html {
     color: $blue;
     margin: 0 auto;
     margin-bottom: 25px;
+    padding-left: 5px;
+    padding-right: 5px;
     text-align: center;
   }
 
@@ -247,7 +250,6 @@ html {
         @include text;
         max-width: 260px;
         margin: 0 auto;
-        // font-size: 18px;
         text-align: center;
         margin-bottom: 20px;
       }
@@ -268,6 +270,8 @@ html {
       @include text;
       margin: 0 auto;
       text-align: center;
+      padding-left: 10px;
+      padding-right: 10px;
     }
 
     &__content {
@@ -284,7 +288,7 @@ html {
       position: relative;
       max-width: 370px;
       margin-bottom: 80px;
-      padding: 75px 25px;
+      padding: 75px 41px;
       padding-bottom: 15px;
       border: 1px solid black;
       border-radius: 15px;
@@ -352,6 +356,9 @@ html {
       padding-left: 30px;
       padding-right: 30px;
       text-align: center;
+      &--underlined {
+        text-decoration: underline;
+      }
     }
   }
 
@@ -458,12 +465,14 @@ html {
     }
 
     .es-accordion {
-      max-width: 1200px;
+      margin: 0 auto;
+      max-width: 1170px;
       padding-left: 15px;
       padding-right: 15px;
 
       &__element {
-        margin-bottom: 6px;
+        margin: 0 auto;
+        margin-bottom: 20px;
         background: #d5e3f0;
         border: 2px solid #d5e3f0;
         border-radius: 5px;
@@ -485,7 +494,7 @@ html {
         @include text;
         font-weight: 700;
         position: relative;
-        padding: 17px 70px 17px 15px;
+        padding: 17px 50px 17px 15px;
         font-size: 16px;
         color: $blue;
         -webkit-transition: all 200ms ease-out;
@@ -518,14 +527,6 @@ html {
         background: url(./images/minus.png) 50% 50% no-repeat;
       }
 
-      &__title:hover:before {
-        // background-color: #333;
-      }
-
-      &__title:hover {
-        // color: #333333;
-      }
-
       & > div:last-of-type {
         margin-bottom: 0;
       }
@@ -553,12 +554,8 @@ html {
         display: none;
       }
 
-      &__hero-images {
-      }
-
       &__content {
         display: block;
-        // padding-top: 100px;
       }
 
       &__start-text {
@@ -630,7 +627,7 @@ html {
 
       &__content {
         display: flex;
-        gap: 90px;
+        gap: 40px;
         justify-content: center;
         align-items: center;
       }
@@ -662,6 +659,11 @@ html {
     }
 
     .es-science {
+      .slick-pagination-2 {
+        bottom: 10%;
+        left: 58%;
+      }
+
       &__slide-img {
         display: none;
         width: 50%;
@@ -670,10 +672,19 @@ html {
           display: block;
         }
       }
+
       &__slide {
         display: flex;
         justify-content: center;
         align-items: center;
+      }
+
+      &__slide-container {
+        flex: 50%;
+      }
+
+      &__slide-description {
+        max-width: 400px;
       }
     }
   }
@@ -693,6 +704,13 @@ html {
 
     .es-steps {
       padding-top: 60px;
+    }
+
+    .es-science {
+      .slick-pagination-2 {
+        bottom: 20%;
+        left: 57%;
+      }
     }
   }
 }
@@ -746,6 +764,11 @@ html {
 
     .es-qr {
       background: url('./images/qr-background.png') no-repeat 65% center;
+
+      &__content {
+        display: flex;
+        gap: 90px;
+      }
     }
   }
 }
@@ -771,6 +794,11 @@ html {
           padding-left: 30px;
           text-align-last: left;
         }
+      }
+
+      .slick-pagination-2 {
+        bottom: 25%;
+        left: 56%;
       }
     }
   }
@@ -803,9 +831,14 @@ html {
 
     .es-science {
       &__text {
-        &--desktop {
+        &--dektop {
           top: 45px;
         }
+      }
+
+      .slick-pagination-2 {
+        bottom: 30%;
+        left: 55%;
       }
     }
   }

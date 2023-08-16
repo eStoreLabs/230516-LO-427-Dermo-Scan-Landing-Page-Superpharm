@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DermoScan</title>
+    <title>Super-Pharm Dermo Scan</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -185,8 +185,8 @@
       <div class="es-advanced">
         <div class="es-advanced__text">
           <p class="es-title es-advanced__title">
-            ZAAWANSOWANE <br />
-            <span class="es-advanced__title--light">ROZWIĄZANIE</span>
+            ZAAWANSOWANE
+            <span class="es-advanced__title--light">ROZWIĄZANIE<br /></span>
             DERMATOLOGICZNE
           </p>
           <p class="es-advanced__description">
@@ -225,12 +225,20 @@
           <p class="es-advanced__disclaimer">
             <sup>*</sup>dla następujących problemów związanych ze starzeniem się
             skóry: pigmentacja, głębokie zmarszczki, promienność, drobne
-            zmarszczki, pory, jędrność.
+            zmarszczki, pory,&nbsp;jędrność.
           </p>
           <p class="es-advanced__section-description">
-            Narzędzie to nie zastępuje konsultacji dermatologicznej i nie
-            wykrywa chorób skóry. Pamiętaj,&nbsp;aby&nbsp;skonsultować się z
-            dermatologiem w celu przeprowadzenia pełnej diagnostyki skóry.
+            Narzędzie to
+            <span class="es-advanced__section-description--underlined">
+              nie zastępuje
+            </span>
+            konsultacji dermatologicznej i
+            <span class="es-advanced__section-description--underlined">
+              &nbsp;nie&nbsp;wykrywa
+            </span>
+            chorób skóry. Pamiętaj,&nbsp;aby&nbsp;skonsultować się
+            z&nbsp;dermatologiem w celu przeprowadzenia pełnej diagnostyki
+            skóry.
           </p>
         </div>
       </div>
@@ -338,7 +346,7 @@
         <div class="es-accordion">
           <div class="es-accordion__element">
             <h3 class="es-accordion__title acc-tab">
-              W jaki sposób Dermo Scan analizuje stan skóry?
+              W jaki sposób Dermo Scan&nbsp;analizuje stan skóry?
             </h3>
             <div class="es-accordion__element-content acc-content">
               <p>
@@ -353,7 +361,8 @@
           </div>
           <div class="es-accordion__element">
             <h3 class="es-accordion__title acc-tab">
-              Czy mogę użyć narzędzia Dermo Scan, jeśli mam na twarzy makijaż?
+              Czy mogę użyć narzędzia Dermo&nbsp;Scan, jeśli mam
+              na&nbsp;twarzy&nbsp;makijaż?
             </h3>
             <div class="es-accordion__element-content acc-content">
               <p>
@@ -441,7 +450,8 @@
     type="text/javascript"
     src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
   ></script>
-  <script src="./js/slick-slider.js"></script>
+  <script src="./scripts/slick-slider.js"></script>
+  <script src="./scripts/script.js"></script>
   <script>
     // require(['jquery', 'slick'], function ($) {
     $(document).ready(function () {
@@ -466,27 +476,5 @@
       });
     });
     // });
-
-    const accTab = document.querySelectorAll('.acc-tab');
-
-    for (let i = 0; i < accTab.length; i++) {
-      accTab[i].addEventListener('click', function () {
-        this.classList.add('active');
-        let accTabContent = this.nextElementSibling;
-        const hideContent = () => {
-          accTabContent.style.maxHeight = null;
-          this.classList.remove('active');
-        };
-        const showContent = () => {
-          accTabContent.style.maxHeight = accTabContent.scrollHeight + 'px';
-          this.classList.add('active');
-        };
-        if (accTabContent.style.maxHeight) {
-          hideContent();
-        } else {
-          showContent();
-        }
-      });
-    }
   </script>
 </html>

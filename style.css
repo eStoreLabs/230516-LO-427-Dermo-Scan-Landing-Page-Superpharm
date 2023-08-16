@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;700;800&display=swap");
 @keyframes es-pulse {
   0% {
     transform: scale(1);
@@ -184,6 +185,8 @@ html {
   color: #17479e;
   margin: 0 auto;
   margin-bottom: 25px;
+  padding-left: 5px;
+  padding-right: 5px;
   text-align: center;
 }
 #es-dermoscan.es-dermoscan .es-kv {
@@ -378,6 +381,8 @@ html {
   font-weight: inherit;
   margin: 0 auto;
   text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 #es-dermoscan.es-dermoscan .es-advanced__content {
   display: flex;
@@ -391,7 +396,7 @@ html {
   position: relative;
   max-width: 370px;
   margin-bottom: 80px;
-  padding: 75px 25px;
+  padding: 75px 41px;
   padding-bottom: 15px;
   border: 1px solid black;
   border-radius: 15px;
@@ -467,6 +472,9 @@ html {
   padding-left: 30px;
   padding-right: 30px;
   text-align: center;
+}
+#es-dermoscan.es-dermoscan .es-advanced__section-description--underlined {
+  text-decoration: underline;
 }
 #es-dermoscan.es-dermoscan .es-science {
   padding-top: 30px;
@@ -557,12 +565,14 @@ html {
   font-weight: 300;
 }
 #es-dermoscan.es-dermoscan .es-faq .es-accordion {
-  max-width: 1200px;
+  margin: 0 auto;
+  max-width: 1170px;
   padding-left: 15px;
   padding-right: 15px;
 }
 #es-dermoscan.es-dermoscan .es-faq .es-accordion__element {
-  margin-bottom: 6px;
+  margin: 0 auto;
+  margin-bottom: 20px;
   background: #d5e3f0;
   border: 2px solid #d5e3f0;
   border-radius: 5px;
@@ -587,7 +597,7 @@ html {
   font-weight: inherit;
   font-weight: 700;
   position: relative;
-  padding: 17px 70px 17px 15px;
+  padding: 17px 50px 17px 15px;
   font-size: 16px;
   color: #17479e;
   transition: all 200ms ease-out;
@@ -693,7 +703,7 @@ html {
   }
   #es-dermoscan.es-dermoscan .es-qr__content {
     display: flex;
-    gap: 90px;
+    gap: 40px;
     justify-content: center;
     align-items: center;
   }
@@ -718,6 +728,10 @@ html {
     min-height: 310px;
     margin-bottom: 30px;
   }
+  #es-dermoscan.es-dermoscan .es-science .slick-pagination-2 {
+    bottom: 10%;
+    left: 58%;
+  }
   #es-dermoscan.es-dermoscan .es-science__slide-img {
     display: none;
     width: 50%;
@@ -730,6 +744,12 @@ html {
     justify-content: center;
     align-items: center;
   }
+  #es-dermoscan.es-dermoscan .es-science__slide-container {
+    flex: 50%;
+  }
+  #es-dermoscan.es-dermoscan .es-science__slide-description {
+    max-width: 400px;
+  }
 }
 @media (min-width: 820px) {
   #es-dermoscan.es-dermoscan .es-kv__start-text {
@@ -740,6 +760,10 @@ html {
   }
   #es-dermoscan.es-dermoscan .es-steps {
     padding-top: 60px;
+  }
+  #es-dermoscan.es-dermoscan .es-science .slick-pagination-2 {
+    bottom: 20%;
+    left: 57%;
   }
 }
 @media (min-width: 900px) {
@@ -776,6 +800,10 @@ html {
   #es-dermoscan.es-dermoscan .es-qr {
     background: url("./images/qr-background.png") no-repeat 65% center;
   }
+  #es-dermoscan.es-dermoscan .es-qr__content {
+    display: flex;
+    gap: 90px;
+  }
 }
 @media (min-width: 1050px) {
   #es-dermoscan.es-dermoscan .es-steps__slides {
@@ -795,6 +823,10 @@ html {
     -moz-text-align-last: left;
          text-align-last: left;
   }
+  #es-dermoscan.es-dermoscan .es-science .slick-pagination-2 {
+    bottom: 25%;
+    left: 56%;
+  }
 }
 @media (min-width: 1200px) {
   #es-dermoscan.es-dermoscan .es-kv {
@@ -813,7 +845,11 @@ html {
   #es-dermoscan.es-dermoscan .es-advanced__content-inner {
     gap: 30px;
   }
-  #es-dermoscan.es-dermoscan .es-science__text--desktop {
+  #es-dermoscan.es-dermoscan .es-science__text--dektop {
     top: 45px;
+  }
+  #es-dermoscan.es-dermoscan .es-science .slick-pagination-2 {
+    bottom: 30%;
+    left: 55%;
   }
 }/*# sourceMappingURL=style.css.map */
