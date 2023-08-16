@@ -602,14 +602,14 @@ html {
   height: 100%;
   top: 0;
   right: 0;
-  background: url(../images/plus.png) 50% 50% no-repeat;
+  background: url(./images/plus.png) 50% 50% no-repeat;
   color: #fff;
   text-align: center;
   line-height: 50px;
   transition: all 200ms ease-out;
 }
 #es-dermoscan.es-dermoscan .es-faq .es-accordion .acc-tab.active:before {
-  background: url(../images/minus.png) 50% 50% no-repeat;
+  background: url(./images/minus.png) 50% 50% no-repeat;
 }
 #es-dermoscan.es-dermoscan .es-faq .es-accordion > div:last-of-type {
   margin-bottom: 0;

@@ -504,7 +504,7 @@ html {
         height: 100%;
         top: 0;
         right: 0;
-        background: url(../images/plus.png) 50% 50% no-repeat;
+        background: url(./images/plus.png) 50% 50% no-repeat;
         color: #fff;
         text-align: center;
         line-height: 50px;
@@ -515,7 +515,7 @@ html {
       }
 
       .acc-tab.active:before {
-        background: url(../images/minus.png) 50% 50% no-repeat;
+        background: url(./images/minus.png) 50% 50% no-repeat;
       }
 
       &__title:hover:before {
