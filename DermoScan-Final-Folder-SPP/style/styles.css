@@ -1,0 +1,858 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;700;800&display=swap');
+@keyframes es-pulse {
+  0% {
+    transform: scale(1);
+  }
+  70% {
+    transform: scale(1.05);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes es-pulse2 {
+  0% {
+    transform: scale(1);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 15px rgba(208, 230, 185, 0);
+  }
+  to {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(208, 230, 185, 0);
+  }
+}
+/* Slider */
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.slick-list:focus {
+  outline: none;
+}
+
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.slick-track:before,
+.slick-track:after {
+  display: table;
+  content: '';
+}
+
+.slick-track:after {
+  clear: both;
+}
+
+.slick-loading .slick-track {
+  visibility: hidden;
+}
+
+.slick-slide {
+  display: none;
+  float: left;
+  height: 100%;
+  min-height: 1px;
+}
+
+[dir='rtl'] .slick-slide {
+  float: right;
+}
+
+.slick-slide img {
+  display: block;
+}
+
+.slick-slide.slick-loading img {
+  display: none;
+}
+
+.slick-slide.dragging img {
+  pointer-events: none;
+}
+
+.slick-initialized .slick-slide {
+  display: block;
+}
+
+.slick-loading .slick-slide {
+  visibility: hidden;
+}
+
+.slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent;
+}
+
+.slick-arrow.slick-hidden {
+  display: none;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#es-dermoscan.es-dermoscan {
+  font-weight: 300;
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0;
+  color: #3d465a;
+  background-color: #fff;
+  font-family: 'Nunito';
+  font-size: 18px;
+}
+#es-dermoscan.es-dermoscan .es-button {
+  margin: 0;
+  padding: 0;
+  line-height: inherit;
+  color: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  display: block;
+  max-width: 295px;
+  margin: 0 auto;
+  padding: 15px 15px;
+  color: #ffffff;
+  font-weight: 800;
+  background-color: #17479e;
+  border: none;
+  border-radius: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+#es-dermoscan.es-dermoscan .es-button:hover {
+  background-color: #1f60d8;
+}
+#es-dermoscan.es-dermoscan .es-title {
+  margin: 0;
+  padding: 0;
+  line-height: inherit;
+  color: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: 22px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #17479e;
+  margin: 0 auto;
+  margin-bottom: 25px;
+  padding-left: 5px;
+  padding-right: 5px;
+  text-align: center;
+}
+#es-dermoscan.es-dermoscan .es-kv {
+  background-color: #edeff1;
+  padding-bottom: 45px;
+}
+#es-dermoscan.es-dermoscan .es-kv__img {
+  width: 100%;
+  margin-bottom: 20px;
+}
+#es-dermoscan.es-dermoscan .es-kv__img--desktop {
+  display: none;
+}
+#es-dermoscan.es-dermoscan .es-kv__start-text {
+  display: none;
+}
+#es-dermoscan.es-dermoscan .es-kv__content {
+  display: none;
+  padding: 30px;
+}
+#es-dermoscan.es-dermoscan .es-kv__logo {
+  margin-bottom: 20px;
+}
+#es-dermoscan.es-dermoscan .es-kv__description {
+  position: relative;
+  padding-left: 20px;
+}
+#es-dermoscan.es-dermoscan .es-kv__description::before {
+  position: absolute;
+  content: '';
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-left: 3px solid #3f4659;
+}
+#es-dermoscan.es-dermoscan .es-kv__title {
+  font-size: 20px;
+  -moz-text-align-last: left;
+  text-align-last: left;
+  font-weight: 800;
+}
+#es-dermoscan.es-dermoscan .es-kv__subtitle {
+  font-size: 16px;
+  max-width: 366px;
+  margin: 0;
+  padding: 0;
+  line-height: inherit;
+  color: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+}
+#es-dermoscan.es-dermoscan .es-qr {
+  display: none;
+  position: relative;
+  margin-top: -20px;
+  padding-top: 20px;
+  z-index: 2;
+  background-color: #d5e3f0;
+}
+#es-dermoscan.es-dermoscan .es-qr__text {
+  margin: 0;
+  padding: 0;
+  line-height: inherit;
+  color: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+}
+#es-dermoscan.es-dermoscan .es-qr__text-title {
+  margin: 0;
+  padding: 0;
+  line-height: inherit;
+  color: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  margin-bottom: 10px;
+  font-size: 30px;
+  font-weight: 800;
+  color: #17479e;
+  animation: es-pulse 2s infinite;
+}
+#es-dermoscan.es-dermoscan .es-qr__text-subtitle {
+  margin: 0;
+  padding: 0;
+  line-height: inherit;
+  color: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  display: inline-block;
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: #17479e;
+}
+#es-dermoscan.es-dermoscan .es-qr__description {
+  margin: 0;
+  padding: 0;
+  line-height: inherit;
+  color: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  color: #3d465a;
+}
+#es-dermoscan.es-dermoscan .es-steps {
+  padding-bottom: 45px;
+  background-color: #edeff1;
+}
+#es-dermoscan.es-dermoscan .es-steps__title--light {
+  font-weight: 300;
+}
+#es-dermoscan.es-dermoscan .es-steps__slider {
+  position: relative;
+  margin-bottom: 30px;
+}
+#es-dermoscan.es-dermoscan .es-steps__slider .slick-pagination,
+#es-dermoscan.es-dermoscan .es-steps__slider .slick-pagination-2 {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+#es-dermoscan.es-dermoscan .es-steps__slider .slick-dots {
+  display: flex;
+  gap: 0 4px;
+  padding: 0;
+  margin: 0;
+}
+#es-dermoscan.es-dermoscan .es-steps__slider .slick-dots li {
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  border-radius: 50%;
+  background: #d6d7db;
+  opacity: 1;
+}
+#es-dermoscan.es-dermoscan .es-steps__slider .slick-dots li:not(:last-child) {
+  margin-right: 6px;
+}
+#es-dermoscan.es-dermoscan .es-steps__slider .slick-dots li.slick-active {
+  background: #17479e;
+}
+#es-dermoscan.es-dermoscan .es-steps__slider .slick-dots li button {
+  display: none;
+}
+#es-dermoscan.es-dermoscan .es-steps__slider--desktop {
+  display: none;
+}
+#es-dermoscan.es-dermoscan .es-steps__slide-img {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+#es-dermoscan.es-dermoscan .es-steps__slide-name {
+  margin: 0;
+  padding: 0;
+  line-height: inherit;
+  color: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #17479e;
+  font-size: 24px;
+  text-align: center;
+  text-transform: uppercase;
+}
+#es-dermoscan.es-dermoscan .es-steps__slide-description {
+  margin: 0;
+  padding: 0;
+  line-height: inherit;
+  color: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  max-width: 260px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 20px;
+}
+#es-dermoscan.es-dermoscan .es-advanced {
+  background-color: rgba(137, 176, 210, 0.329);
+  padding: 35px 15px;
+}
+#es-dermoscan.es-dermoscan .es-advanced__title--light {
+  font-weight: 300;
+}
+#es-dermoscan.es-dermoscan .es-advanced__description {
+  margin: 0;
+  padding: 0;
+  line-height: inherit;
+  color: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  margin: 0 auto;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+#es-dermoscan.es-dermoscan .es-advanced__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#es-dermoscan.es-dermoscan .es-advanced__text {
+  margin-bottom: 50px;
+}
+#es-dermoscan.es-dermoscan .es-advanced__item {
+  position: relative;
+  max-width: 370px;
+  margin-bottom: 80px;
+  padding: 75px 41px;
+  padding-bottom: 15px;
+  border: 1px solid black;
+  border-radius: 15px;
+}
+#es-dermoscan.es-dermoscan .es-advanced__item--first::before {
+  content: '';
+  width: 100%;
+  height: 87px;
+  background: url('../images/icon-1-bg.png') no-repeat center center;
+  position: absolute;
+  top: 3px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#es-dermoscan.es-dermoscan .es-advanced__item--second::before {
+  content: '';
+  width: 100%;
+  height: 87px;
+  background: url('../images/icon-2-bg.png') no-repeat center center;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#es-dermoscan.es-dermoscan .es-advanced__item:last-of-type {
+  margin-bottom: 30px;
+}
+#es-dermoscan.es-dermoscan .es-advanced__problem-title {
+  max-width: 190px;
+  margin: 0;
+  padding: 0;
+  line-height: inherit;
+  color: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: 30px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #ed1a38;
+}
+#es-dermoscan.es-dermoscan .es-advanced__problem-title--bold {
+  font-weight: 700;
+}
+#es-dermoscan.es-dermoscan .es-advanced__problem-description {
+  min-height: 110px;
+  margin: 0;
+  padding: 0;
+  line-height: inherit;
+  color: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  text-align: center;
+}
+#es-dermoscan.es-dermoscan .es-advanced__disclaimer {
+  margin: 0;
+  padding: 0;
+  line-height: inherit;
+  color: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  margin-bottom: 30px;
+  font-size: 14px;
+  text-align: center;
+}
+#es-dermoscan.es-dermoscan .es-advanced__section-description {
+  margin: 0;
+  padding: 0;
+  line-height: inherit;
+  color: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  padding-left: 30px;
+  padding-right: 30px;
+  text-align: center;
+}
+#es-dermoscan.es-dermoscan .es-advanced__section-description--underlined {
+  text-decoration: underline;
+}
+#es-dermoscan.es-dermoscan .es-science {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+#es-dermoscan.es-dermoscan .es-science__title--light {
+  font-weight: 300;
+}
+#es-dermoscan.es-dermoscan .es-science__slider-2 {
+  position: relative;
+  margin-bottom: 30px;
+}
+#es-dermoscan.es-dermoscan .es-science__slider-2 .slick-pagination-2 {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+#es-dermoscan.es-dermoscan .es-science__slider-2 .slick-dots {
+  display: flex;
+  gap: 0 4px;
+  padding: 0;
+  margin: 0;
+}
+#es-dermoscan.es-dermoscan .es-science__slider-2 .slick-dots li {
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  border-radius: 50%;
+  background: #d6d7db;
+  opacity: 1;
+}
+#es-dermoscan.es-dermoscan
+  .es-science__slider-2
+  .slick-dots
+  li:not(:last-child) {
+  margin-right: 6px;
+}
+#es-dermoscan.es-dermoscan .es-science__slider-2 .slick-dots li.slick-active {
+  background: #17479e;
+}
+#es-dermoscan.es-dermoscan .es-science__slider-2 .slick-dots li button {
+  display: none;
+}
+#es-dermoscan.es-dermoscan .es-science__slide {
+  padding-right: 15px;
+}
+#es-dermoscan.es-dermoscan .es-science__slide-container {
+  padding-left: 40px;
+  padding-right: 15px;
+}
+#es-dermoscan.es-dermoscan .es-science__slide-img {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+#es-dermoscan.es-dermoscan .es-science__slide-img--desktop {
+  display: none;
+}
+#es-dermoscan.es-dermoscan .es-science__slide-name {
+  margin: 0;
+  padding: 0;
+  line-height: inherit;
+  color: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #ed1a38;
+  text-transform: uppercase;
+}
+#es-dermoscan.es-dermoscan .es-science__slide-description {
+  margin: 0;
+  padding: 0;
+  line-height: inherit;
+  color: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  margin-bottom: 20px;
+}
+#es-dermoscan.es-dermoscan .es-science__text--desktop {
+  display: none;
+}
+#es-dermoscan.es-dermoscan .es-faq {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+#es-dermoscan.es-dermoscan .es-faq__title--light {
+  font-weight: 300;
+}
+#es-dermoscan.es-dermoscan .es-faq .es-accordion {
+  margin: 0 auto;
+  max-width: 1170px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+#es-dermoscan.es-dermoscan .es-faq .es-accordion__element {
+  margin: 0 auto;
+  margin-bottom: 20px;
+  background: #d5e3f0;
+  border: 2px solid #d5e3f0;
+  border-radius: 5px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+}
+#es-dermoscan.es-dermoscan .es-faq .es-accordion__element-content {
+  font-size: 13px;
+  color: #888885;
+  overflow: hidden;
+  padding-left: 20px;
+  padding-right: 20px;
+  max-height: 0;
+  transition: max-height 0.5s ease-out;
+  background: #ffffff;
+}
+#es-dermoscan.es-dermoscan .es-faq .es-accordion__title {
+  margin: 0;
+  padding: 0;
+  line-height: inherit;
+  color: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  font-weight: 700;
+  position: relative;
+  padding: 17px 50px 17px 15px;
+  font-size: 16px;
+  color: #17479e;
+  transition: all 200ms ease-out;
+  cursor: pointer;
+}
+#es-dermoscan.es-dermoscan .es-faq .es-accordion .acc-tab:before {
+  font-family: 'FontAwesome';
+  content: '';
+  display: block;
+  position: absolute;
+  width: 50px;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background: url(../images/plus.png) 50% 50% no-repeat;
+  color: #fff;
+  text-align: center;
+  line-height: 50px;
+  transition: all 200ms ease-out;
+}
+#es-dermoscan.es-dermoscan .es-faq .es-accordion .acc-tab.active:before {
+  background: url(../images/minus.png) 50% 50% no-repeat;
+}
+#es-dermoscan.es-dermoscan .es-faq .es-accordion > div:last-of-type {
+  margin-bottom: 0;
+}
+
+@media (min-width: 480px) {
+  #es-dermoscan.es-dermoscan .es-science__slide-img {
+    margin-left: 0;
+    width: 450px;
+  }
+}
+@media (min-width: 550px) {
+  #es-dermoscan.es-dermoscan .es-kv {
+    position: relative;
+  }
+  #es-dermoscan.es-dermoscan .es-kv__button {
+    display: none;
+  }
+  #es-dermoscan.es-dermoscan .es-kv__content {
+    display: block;
+  }
+  #es-dermoscan.es-dermoscan .es-kv__start-text {
+    display: inline-block;
+    position: absolute;
+    bottom: 1%;
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    line-height: inherit;
+    color: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+    padding: 28px;
+    font-weight: 700;
+    color: #ffffff;
+    background: #17479e;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  #es-dermoscan.es-dermoscan .es-kv__img {
+    display: none;
+  }
+  #es-dermoscan.es-dermoscan .es-kv__img--desktop {
+    display: block;
+  }
+  #es-dermoscan.es-dermoscan .es-steps {
+    padding-top: 15px;
+  }
+  #es-dermoscan.es-dermoscan .es-steps__slider {
+    display: none;
+  }
+  #es-dermoscan.es-dermoscan .es-steps__slider--desktop {
+    display: block;
+  }
+  #es-dermoscan.es-dermoscan .es-steps__slides {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 570px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 695px) {
+  #es-dermoscan.es-dermoscan .es-kv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 60px;
+  }
+  #es-dermoscan.es-dermoscan .es-kv__content {
+    order: 1;
+  }
+  #es-dermoscan.es-dermoscan .es-qr {
+    display: block;
+    padding: 15px;
+    padding-bottom: 0;
+  }
+  #es-dermoscan.es-dermoscan .es-qr__content {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+  }
+  #es-dermoscan.es-dermoscan .es-qr__img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+    width: 340px;
+  }
+  #es-dermoscan.es-dermoscan .es-advanced__content-inner {
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  #es-dermoscan.es-dermoscan .es-advanced__description {
+    margin-bottom: 80px;
+  }
+  #es-dermoscan.es-dermoscan .es-advanced__item {
+    width: 50%;
+    min-height: 310px;
+    margin-bottom: 30px;
+  }
+  #es-dermoscan.es-dermoscan .es-science .slick-pagination-2 {
+    bottom: 10%;
+    left: 58%;
+  }
+  #es-dermoscan.es-dermoscan .es-science__slide-img {
+    display: none;
+    width: 50%;
+  }
+  #es-dermoscan.es-dermoscan .es-science__slide-img--desktop {
+    display: block;
+  }
+  #es-dermoscan.es-dermoscan .es-science__slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #es-dermoscan.es-dermoscan .es-science__slide-container {
+    flex: 50%;
+  }
+  #es-dermoscan.es-dermoscan .es-science__slide-description {
+    max-width: 400px;
+  }
+}
+@media (min-width: 820px) {
+  #es-dermoscan.es-dermoscan .es-kv__start-text {
+    bottom: 6%;
+  }
+  #es-dermoscan.es-dermoscan .es-qr {
+    margin-top: -44px;
+  }
+  #es-dermoscan.es-dermoscan .es-steps {
+    padding-top: 60px;
+  }
+  #es-dermoscan.es-dermoscan .es-science .slick-pagination-2 {
+    bottom: 20%;
+    left: 57%;
+  }
+}
+@media (min-width: 900px) {
+  #es-dermoscan.es-dermoscan .es-title {
+    font-size: 35px;
+  }
+  #es-dermoscan.es-dermoscan .es-kv__img--desktop {
+    width: 500px;
+  }
+  #es-dermoscan.es-dermoscan .es-kv__start-text {
+    bottom: 7%;
+  }
+  #es-dermoscan.es-dermoscan .es-kv__title {
+    font-size: 28px;
+    font-weight: 800;
+  }
+  #es-dermoscan.es-dermoscan .es-kv__subtitle {
+    font-size: 18px;
+  }
+  #es-dermoscan.es-dermoscan .es-advanced__disclaimer {
+    max-width: 740px;
+    margin-bottom: 10px;
+  }
+  #es-dermoscan.es-dermoscan .es-advanced__section-description {
+    max-width: 840px;
+    margin-top: 0;
+  }
+  #es-dermoscan.es-dermoscan .es-steps {
+    padding-bottom: 20px;
+  }
+  #es-dermoscan.es-dermoscan .es-steps__title {
+    margin-bottom: 60px;
+  }
+  #es-dermoscan.es-dermoscan .es-qr {
+    background: url('../images/qr-background.png') no-repeat 65% center;
+  }
+  #es-dermoscan.es-dermoscan .es-qr__content {
+    display: flex;
+    gap: 90px;
+  }
+}
+@media (min-width: 1050px) {
+  #es-dermoscan.es-dermoscan .es-steps__slides {
+    max-width: 100%;
+  }
+  #es-dermoscan.es-dermoscan .es-science {
+    position: relative;
+  }
+  #es-dermoscan.es-dermoscan .es-science__text {
+    display: none;
+  }
+  #es-dermoscan.es-dermoscan .es-science__text--desktop {
+    display: block;
+    position: absolute;
+    left: 50%;
+    padding-left: 30px;
+    -moz-text-align-last: left;
+    text-align-last: left;
+  }
+  #es-dermoscan.es-dermoscan .es-science .slick-pagination-2 {
+    bottom: 25%;
+    left: 56%;
+  }
+}
+@media (min-width: 1200px) {
+  #es-dermoscan.es-dermoscan .es-kv {
+    gap: 30px;
+  }
+  #es-dermoscan.es-dermoscan .es-kv__content {
+    margin-bottom: 80px;
+  }
+  #es-dermoscan.es-dermoscan .es-kv__title {
+    margin-bottom: 10px;
+    font-size: 35px;
+  }
+  #es-dermoscan.es-dermoscan .es-kv__subtitle {
+    font-size: 19px;
+  }
+  #es-dermoscan.es-dermoscan .es-advanced__content-inner {
+    gap: 30px;
+  }
+  #es-dermoscan.es-dermoscan .es-science__text--dektop {
+    top: 45px;
+  }
+  #es-dermoscan.es-dermoscan .es-science .slick-pagination-2 {
+    bottom: 30%;
+    left: 55%;
+  }
+} /*# sourceMappingURL=style.css.map */
