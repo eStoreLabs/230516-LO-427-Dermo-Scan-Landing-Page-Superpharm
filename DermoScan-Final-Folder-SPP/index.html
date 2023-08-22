@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Super-Pharm Dermo Scan</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
     <link rel="stylesheet" href="./style/styles.css" />
   </head>
   <body>
@@ -430,30 +435,18 @@
       </div>
     </div>
   </body>
+  <script
+    type="text/javascript"
+    src="//code.jquery.com/jquery-1.11.0.min.js"
+  ></script>
+  <script
+    type="text/javascript"
+    src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+  ></script>
+  <script
+    type="text/javascript"
+    src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+  ></script>
   <script src="./scripts/script.js"></script>
-  <script>
-    require(['jquery', 'slick'], function ($) {
-      $(document).ready(function () {
-        $('.es-slick-carousel').slick({
-          dots: true,
-          infinite: true,
-          prevArrow: '.slick-button-prev',
-          nextArrow: '.slick-button-next',
-          appendDots: '.slick-pagination',
-          adaptiveHeight: true,
-        });
-      });
-
-      $(document).ready(function () {
-        $('.es-slick-carousel-2').slick({
-          dots: true,
-          infinite: true,
-          prevArrow: '.slick-button-2-prev',
-          nextArrow: '.slick-button-2-next',
-          appendDots: '.slick-pagination-2',
-          adaptiveHeight: true,
-        });
-      });
-    });
-  </script>
+  <script></script>
 </html>

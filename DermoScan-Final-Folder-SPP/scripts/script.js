@@ -1,3 +1,27 @@
+require(['jquery', 'slick'], function ($) {
+  $(document).ready(function () {
+    $('.es-slick-carousel').slick({
+      dots: true,
+      infinite: true,
+      prevArrow: '.slick-button-prev',
+      nextArrow: '.slick-button-next',
+      appendDots: '.slick-pagination',
+      adaptiveHeight: true,
+    });
+  });
+
+  $(document).ready(function () {
+    $('.es-slick-carousel-2').slick({
+      dots: true,
+      infinite: true,
+      prevArrow: '.slick-button-2-prev',
+      nextArrow: '.slick-button-2-next',
+      appendDots: '.slick-pagination-2',
+      adaptiveHeight: true,
+    });
+  });
+});
+
 const accTab = document.querySelectorAll('.acc-tab');
 
 for (let i = 0; i < accTab.length; i++) {
