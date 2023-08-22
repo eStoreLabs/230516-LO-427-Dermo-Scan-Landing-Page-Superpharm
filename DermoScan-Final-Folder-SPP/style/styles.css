@@ -661,6 +661,10 @@ html {
   transition: max-height 0.5s ease-out;
   background: #ffffff;
 }
+#es-dermoscan.es-dermoscan .es-faq .es-accordion__element-description {
+  margin-top: 13px;
+  margin-bottom: 13px;
+}
 #es-dermoscan.es-dermoscan .es-faq .es-accordion__title {
   margin: 0;
   padding: 0;
