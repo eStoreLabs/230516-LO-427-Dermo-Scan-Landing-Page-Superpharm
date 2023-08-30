@@ -532,6 +532,18 @@ html {
       }
     }
   }
+  .es-disclaimer {
+    max-width: 1170px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+
+    &__text {
+      margin-top: 20px;
+      @include text;
+      font-size: 12px;
+    }
+  }
 }
 
 @media (min-width: 480px) {
@@ -549,6 +561,8 @@ html {
   #es-dermoscan.es-dermoscan {
     .es-kv {
       position: relative;
+      background: url('./images/bg-desktop.png') no-repeat center center;
+      background-size: cover;
 
       &__button {
         display: none;

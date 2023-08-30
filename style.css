@@ -624,6 +624,22 @@ html {
 #es-dermoscan.es-dermoscan .es-faq .es-accordion > div:last-of-type {
   margin-bottom: 0;
 }
+#es-dermoscan.es-dermoscan .es-disclaimer {
+  max-width: 1170px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+#es-dermoscan.es-dermoscan .es-disclaimer__text {
+  margin-top: 20px;
+  margin: 0;
+  padding: 0;
+  line-height: inherit;
+  color: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: 12px;
+}
 
 @media (min-width: 480px) {
   #es-dermoscan.es-dermoscan .es-science__slide-img {
@@ -634,6 +650,8 @@ html {
 @media (min-width: 550px) {
   #es-dermoscan.es-dermoscan .es-kv {
     position: relative;
+    background: url("./images/bg-desktop.png") no-repeat center center;
+    background-size: cover;
   }
   #es-dermoscan.es-dermoscan .es-kv__button {
     display: none;
